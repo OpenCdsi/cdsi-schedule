@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Cdsi.SupportingDataLibrary;
+using Cdsi.SupportingData;
 
 namespace Cdsi
 {
-    public static class SupportingData
+    public static class Library
     {
         public static scheduleSupportingData Schedule { get; } = Factories.CreateSupportingData();
 

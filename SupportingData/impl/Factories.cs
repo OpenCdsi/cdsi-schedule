@@ -6,12 +6,12 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
-namespace Cdsi.SupportingDataLibrary
+namespace Cdsi.SupportingData
 {
     public static class Factories
     {
-        private const string ScheduleResourceName = "SupportingDataLibrary.xml.ScheduleSupportingData.xml";
-       private static readonly Regex AntigenResourceNameRegex = new Regex("SupportingDataLibrary.xml.AntigenSupportingData-\\s*([\\w\\s]*)-508.xml");
+        private const string ScheduleResourceName = "Cdsi.SupportingData.xml.ScheduleSupportingData.xml";
+       private static readonly Regex AntigenResourceNameRegex = new Regex("Cdsi.SupportingData.xml.AntigenSupportingData-\\s*([\\w\\s]*)-508.xml");
 
         public static IDictionary<string, antigenSupportingData> CreateAntigenMap()
         {
@@ -29,7 +29,7 @@ namespace Cdsi.SupportingDataLibrary
 
         public static IDictionary<string, string> CreateVaccineTypeMap()
         {
-            return SupportingData.Antigen.Values
+            return Library.Antigen.Values
                       .SelectMany(x => x.series)
                       .SelectMany(x => x.seriesDose)
                       .SelectMany(x => x.preferableVaccine.Select(xx => KeyValuePair.Create(xx.cvx, xx.vaccineType))

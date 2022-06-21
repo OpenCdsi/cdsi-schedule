@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Cdsi.SupportingDataLibrary
+namespace Cdsi.SupportingData
 {
     class KvpEqualityComparer : IEqualityComparer<KeyValuePair<string, string>>
     {

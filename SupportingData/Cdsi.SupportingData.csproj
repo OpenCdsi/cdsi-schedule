@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -56,10 +57,6 @@
     <EmbeddedResource Include="xml\AntigenSupportingData- YF-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Zoster-508.xml" />
     <EmbeddedResource Include="xml\ScheduleSupportingData.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
 </Project>

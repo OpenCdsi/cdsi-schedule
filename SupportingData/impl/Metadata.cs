@@ -1,4 +1,4 @@
-﻿namespace Cdsi.SupportingDataLibrary
+﻿namespace Cdsi.SupportingData
 {
     public static class Metadata
     {

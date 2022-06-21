@@ -9,7 +9,7 @@ namespace Cdsi.UnitTests
         [TestMethod]
         public void AntigenNames()
         {
-            var names = Library.Antigen.Keys;
+            var names = Data.Antigen.Keys;
             Assert.AreEqual(23, names.Count);
         }
 
@@ -17,14 +17,14 @@ namespace Cdsi.UnitTests
         public void CanReadAntigenData()
         {
             var key = "Cholera";
-            var data = Library.Antigen[key];
+            var data = Data.Antigen[key];
             Assert.AreEqual(key, data.series[0].targetDisease);
         }
 
         [TestMethod]
         public void CanReadcheduleData()
         {
-            var data = Library.Schedule;
+            var data = Data.Schedule;
             Assert.IsInstanceOfType(data, typeof(scheduleSupportingData));
         }
     }

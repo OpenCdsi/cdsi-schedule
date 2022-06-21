@@ -3,7 +3,7 @@ using Cdsi.SupportingData;
 
 namespace Cdsi
 {
-    public static class Library
+    public static partial class Data
     {
         public static scheduleSupportingData Schedule { get; } = Factories.CreateSupportingData();
 

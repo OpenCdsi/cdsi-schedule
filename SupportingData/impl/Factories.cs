@@ -29,7 +29,7 @@ namespace Cdsi.SupportingData
 
         public static IDictionary<string, string> CreateVaccineTypeMap()
         {
-            return Library.Antigen.Values
+            return Data.Antigen.Values
                       .SelectMany(x => x.series)
                       .SelectMany(x => x.seriesDose)
                       .SelectMany(x => x.preferableVaccine.Select(xx => KeyValuePair.Create(xx.cvx, xx.vaccineType))

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{648C40F0-2911-4F62-8BAC-3704CAB45F2D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cdsi.SupportingData", "SupportingData\Cdsi.SupportingData.csproj", "{195E3AC2-1E8C-4215-B782-867B9F7BA1D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCdsi.SupportingData", "SupportingData\OpenCdsi.SupportingData.csproj", "{195E3AC2-1E8C-4215-B782-867B9F7BA1D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

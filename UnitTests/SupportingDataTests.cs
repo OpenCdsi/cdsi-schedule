@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Cdsi.SupportingData;
+using OpenCdsi.SupportingData;
+using OpenCdsi;
 
 namespace Cdsi.UnitTests
 {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Cdsi.SupportingData
+namespace OpenCdsi.SupportingData
 {
     public static class ScheduleHelpers
     {

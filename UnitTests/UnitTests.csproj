@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SupportingData\Cdsi.SupportingData.csproj" />
+    <ProjectReference Include="..\SupportingData\OpenCdsi.SupportingData.csproj" />
   </ItemGroup>
 
 </Project>

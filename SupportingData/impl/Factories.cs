@@ -10,8 +10,8 @@ namespace OpenCdsi.SupportingData
 {
     public static class Factories
     {
-        private const string ScheduleResourceName = "OpenCdsi.SupportingData.xml.ScheduleSupportingData.xml";
-       private static readonly Regex AntigenResourceNameRegex = new Regex("OpenCdsi.SupportingData.xml.AntigenSupportingData-\\s*([\\w\\s]*)-508.xml");
+        private const string ScheduleResourceName = "OpenCdsi.Schedule.xml.ScheduleSupportingData.xml";
+       private static readonly Regex AntigenResourceNameRegex = new Regex("OpenCdsi.Schedule.xml.AntigenSupportingData-\\s*([\\w\\s]*)-508.xml");
 
         public static IDictionary<string, antigenSupportingData> CreateAntigenMap()
         {

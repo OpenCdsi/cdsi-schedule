@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
-  </PropertyGroup>
+		  <PackageId>OpenCdsi.Schedule</PackageId>
+		  <RepositoryType>git</RepositoryType>
+		  <RepositoryUrl>https://github.com/opencdsi/cdsi-schedule</RepositoryUrl>
+	  </PropertyGroup>
 
   <ItemGroup>
     <None Remove="xml\AntigenSupportingData- Cholera-508.xml" />

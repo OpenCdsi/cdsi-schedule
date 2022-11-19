@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
 		  <PackageId>OpenCdsi.Schedule</PackageId>
 		  <RepositoryType>git</RepositoryType>
-		  <RepositoryUrl>https://github.com/opencdsi/cdsi-schedule</RepositoryUrl>
+		  <RepositoryUrl>https://github.com/opencdsi/ocdsi-schedule</RepositoryUrl>
 	  </PropertyGroup>
 
   <ItemGroup>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace OpenCdsi.Schedule
@@ -20,7 +19,7 @@ namespace OpenCdsi.Schedule
         }
         public static IEnumerable<string> Antigens(this scheduleSupportingDataVaccineGroup store)
         {
-            return SupportingData._schedule.vaccineGroupToAntigenMap
+            return Cdsi._schedule.vaccineGroupToAntigenMap
                 .Where(item => item.name == store.name)
                 .SelectMany(item => item.antigen);
         }
@@ -48,7 +47,7 @@ namespace OpenCdsi.Schedule
         {
             return store.FirstOrDefault(item => int.Parse(item.observationCode) == idx);
         }
-        public static antigenSupportingData Get(this IDictionary<string, antigenSupportingData> store, string idx)
+        public static antigenSupportingData Get(this IReadOnlyDictionary<string, antigenSupportingData> store, string idx)
         {
             if (store.TryGetValue(idx, out antigenSupportingData value))
                 return value;

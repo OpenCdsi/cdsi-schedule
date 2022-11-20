@@ -9,7 +9,10 @@
 
   <ItemGroup>
     <None Remove="xml\AntigenSupportingData- Cholera-508.xml" />
+    <None Remove="xml\AntigenSupportingData- COVID-19-508.xml" />
+    <None Remove="xml\AntigenSupportingData- Dengue-508.xml" />
     <None Remove="xml\AntigenSupportingData- Diphtheria-508.xml" />
+    <None Remove="xml\AntigenSupportingData- Ebola-508.xml" />
     <None Remove="xml\AntigenSupportingData- HepA-508.xml" />
     <None Remove="xml\AntigenSupportingData- HepB-508.xml" />
     <None Remove="xml\AntigenSupportingData- Hib-508.xml" />
@@ -20,6 +23,7 @@
     <None Remove="xml\AntigenSupportingData- Meningococcal B-508.xml" />
     <None Remove="xml\AntigenSupportingData- Meningococcal-508.xml" />
     <None Remove="xml\AntigenSupportingData- Mumps-508.xml" />
+    <None Remove="xml\AntigenSupportingData- Orthopoxvirus-508.xml" />
     <None Remove="xml\AntigenSupportingData- Pertussis-508.xml" />
     <None Remove="xml\AntigenSupportingData- Pneumococcal-508.xml" />
     <None Remove="xml\AntigenSupportingData- Polio-508.xml" />
@@ -31,12 +35,17 @@
     <None Remove="xml\AntigenSupportingData- Varicella-508.xml" />
     <None Remove="xml\AntigenSupportingData- YF-508.xml" />
     <None Remove="xml\AntigenSupportingData- Zoster-508.xml" />
+    <None Remove="xml\AntigenSupportingData.xsd" />
     <None Remove="xml\ScheduleSupportingData.xml" />
+    <None Remove="xml\ScheduleSupportingData.xsd" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="xml\AntigenSupportingData- Cholera-508.xml" />
+    <EmbeddedResource Include="xml\AntigenSupportingData- COVID-19-508.xml" />
+    <EmbeddedResource Include="xml\AntigenSupportingData- Dengue-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Diphtheria-508.xml" />
+    <EmbeddedResource Include="xml\AntigenSupportingData- Ebola-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- HepA-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- HepB-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Hib-508.xml" />
@@ -47,6 +56,7 @@
     <EmbeddedResource Include="xml\AntigenSupportingData- Meningococcal B-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Meningococcal-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Mumps-508.xml" />
+    <EmbeddedResource Include="xml\AntigenSupportingData- Orthopoxvirus-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Pertussis-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Pneumococcal-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Polio-508.xml" />
@@ -58,7 +68,9 @@
     <EmbeddedResource Include="xml\AntigenSupportingData- Varicella-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- YF-508.xml" />
     <EmbeddedResource Include="xml\AntigenSupportingData- Zoster-508.xml" />
+    <EmbeddedResource Include="xml\AntigenSupportingData.xsd" />
     <EmbeddedResource Include="xml\ScheduleSupportingData.xml" />
+    <EmbeddedResource Include="xml\ScheduleSupportingData.xsd" />
   </ItemGroup>
 
 </Project>

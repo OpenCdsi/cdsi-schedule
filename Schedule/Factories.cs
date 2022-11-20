@@ -6,14 +6,14 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
-namespace OpenCdsi.SupportingData
+namespace OpenCdsi.Schedule
 {
     public static class Factories
     {
-        private const string ScheduleResourceName = "OpenCdsi.Schedule.xml.ScheduleSupportingData.xml";
-       private static readonly Regex AntigenResourceNameRegex = new Regex("OpenCdsi.Schedule.xml.AntigenSupportingData-\\s*([\\w\\s]*)-508.xml");
+        private const string ScheduleResourceName = "OpenCdsi.Schedule.resources.ScheduleSupportingData.xml";
+       private static readonly Regex AntigenResourceNameRegex = new Regex("OpenCdsi.Schedule.resources.AntigenSupportingData-\\s*([\\w\\s]*)-508.xml");
 
-        public static IDictionary<string, antigenSupportingData> CreateAntigenMap()
+        public static IDictionary<string, antigenSupportingData> ReadAntigenData()
         {
             var deserializer = new XmlSerializer(typeof(antigenSupportingData));
             var assembly = Assembly.GetAssembly(typeof(Metadata));
@@ -24,24 +24,10 @@ namespace OpenCdsi.SupportingData
                   .Select(x => assembly.GetManifestResourceStream(x.Item1))
                   .Select(x => (antigenSupportingData)deserializer.Deserialize(x))
                   .Select(x => KeyValuePair.Create(x.series[0].targetDisease, x))
-                  .AsMap();
+                  .ToDictionary(x=>x.Key,x=>x.Value);
         }
 
-        public static IDictionary<string, string> CreateVaccineTypeMap()
-        {
-            return Data.Antigen.Values
-                      .SelectMany(x => x.series)
-                      .SelectMany(x => x.seriesDose)
-                      .SelectMany(x => x.preferableVaccine.Select(xx => KeyValuePair.Create(xx.cvx, xx.vaccineType))
-                         .Concat(x.allowableVaccine.Select(xx => KeyValuePair.Create(xx.cvx, xx.vaccineType))))
-                     .Where(x => !string.IsNullOrWhiteSpace(x.Key))
-                     .Distinct(new 
-                     KeyEqualityComparer())
-                     .OrderBy(x => x.Key)
-                     .AsMap();
-        }
-
-        public static scheduleSupportingData CreateSupportingData()
+        public static scheduleSupportingData ReadScheduleData()
         {
             var assembly = Assembly.GetAssembly(typeof(Metadata));
             var resource = assembly.GetManifestResourceStream(ScheduleResourceName);

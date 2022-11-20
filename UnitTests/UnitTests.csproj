@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SupportingData\OpenCdsi.Schedule.csproj" />
+    <ProjectReference Include="..\Schedule\OpenCdsi.Schedule.csproj" />
   </ItemGroup>
 
 </Project>

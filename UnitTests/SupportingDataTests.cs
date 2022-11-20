@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenCdsi;
 using OpenCdsi.Schedule;
 using System.Collections.Generic;
 
@@ -19,14 +20,14 @@ namespace OpenCdsi.UnitTests
         [TestMethod]
         public void AntigenNames()
         {
-            Assert.AreEqual(ANTIGEN_COUNT, Cdsi.Schedule.Antigens.Count);
+            Assert.AreEqual(ANTIGEN_COUNT, Cdsi.Antigens.Count);
         }
 
         [TestMethod]
         public void CanReadAntigenData()
         {
             var key = "Cholera";
-            var data = Cdsi.Schedule.Antigens[key];
+            var data = Cdsi.Antigens[key];
             Assert.AreEqual(key, data.series[0].targetDisease);
         }
 
@@ -34,7 +35,7 @@ namespace OpenCdsi.UnitTests
         public void CanGetAntigenData()
         {
             var key = "Cholera";
-            var data = Cdsi.Schedule.Antigens.Get(key);
+            var data = Cdsi.Antigens.Get(key);
             Assert.AreEqual(key, data.series[0].targetDisease);
         }
 
@@ -42,7 +43,7 @@ namespace OpenCdsi.UnitTests
         public void GettingUnknownAntigenDataReturnsDefault()
         {
             var key = "CoronaWithLime";
-            var data = Cdsi.Schedule.Antigens.Get(key);
+            var data = Cdsi.Antigens.Get(key);
             Assert.AreEqual(default, data);
         }
 

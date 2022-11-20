@@ -9,7 +9,14 @@ namespace Cdsi.UnitTests
     public class SupportingDataTests
     {
         const int ANTIGEN_COUNT = 26;
+        const string SUPPORTING_DATA_VERSION = "4.38";
 
+        [TestMethod]
+        public void CheckVersionNumber() 
+        {
+            Assert.AreEqual(SUPPORTING_DATA_VERSION, Metadata.SupportingDataVersion);
+        }
+        
         [TestMethod]
         public void AntigenNames()
         {

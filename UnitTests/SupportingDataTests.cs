@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenCdsi.Schedule;
-using System;
 using System.Collections.Generic;
 
 namespace OpenCdsi.UnitTests

@@ -20,7 +20,7 @@ namespace OpenCdsi.Schedule
         }
         public static IEnumerable<string> Antigens(this scheduleSupportingDataVaccineGroup store)
         {
-            return SupportingData._schedule.vaccineGroupToAntigenMap
+            return Cdsi.Schedule._schedule.vaccineGroupToAntigenMap
                 .Where(item => item.name == store.name)
                 .SelectMany(item => item.antigen);
         }

@@ -3,7 +3,7 @@ using OpenCdsi.Schedule;
 
 namespace OpenCdsi
 {
-    public class Cdsi
+    public class SupportingData
     {
         internal static scheduleSupportingData _schedule = Factories.ReadScheduleData();
 

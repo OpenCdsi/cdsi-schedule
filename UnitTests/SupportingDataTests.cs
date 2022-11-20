@@ -11,7 +11,7 @@ namespace Cdsi.UnitTests
         public void AntigenNames()
         {
             var names = Data.Antigen.Keys;
-            Assert.AreEqual(23, names.Count);
+            Assert.AreEqual(26, names.Count);
         }
 
         [TestMethod]

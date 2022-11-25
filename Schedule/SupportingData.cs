@@ -11,11 +11,13 @@ namespace OpenCdsi
 
         public class Schedule
         {
+
             public static IEnumerable<scheduleSupportingDataLiveVirusConflict> LiveVirusConflicts => _schedule.liveVirusConflicts;
             public static IEnumerable<scheduleSupportingDataVaccineGroup> VaccineGroups => _schedule.vaccineGroups;
             public static IEnumerable<scheduleSupportingDataCvxMap> Vaccines => _schedule.cvxToAntigenMap;
             public static IEnumerable<scheduleSupportingDataObservation> Observations => _schedule.observations;
         }
+        public static string ResourceVersion => Metadata.ResourceVersion;
         public static IReadOnlyDictionary<string, antigenSupportingData> Antigens => (IReadOnlyDictionary<string, antigenSupportingData>)_antigens;
     }
 }
